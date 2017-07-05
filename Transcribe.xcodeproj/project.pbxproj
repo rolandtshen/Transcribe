@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A7D36911EDA383A00D5AE95 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D36901EDA383A00D5AE95 /* TableViewController.swift */; };
+		2A7D36961EDA609500D5AE95 /* RecordingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D36951EDA609500D5AE95 /* RecordingCell.swift */; };
 		2AE01B171EC3E40900F069A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE01B161EC3E40900F069A3 /* AppDelegate.swift */; };
-		2AE01B191EC3E40900F069A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE01B181EC3E40900F069A3 /* ViewController.swift */; };
+		2AE01B191EC3E40900F069A3 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE01B181EC3E40900F069A3 /* RecordingViewController.swift */; };
 		2AE01B1C1EC3E40900F069A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE01B1A1EC3E40900F069A3 /* Main.storyboard */; };
 		2AE01B1E1EC3E40900F069A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AE01B1D1EC3E40900F069A3 /* Assets.xcassets */; };
 		2AE01B211EC3E40900F069A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE01B1F1EC3E40900F069A3 /* LaunchScreen.storyboard */; };
+		5E197DA1AC0C47643E65A8C9 /* Pods_Transcribe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C3BDE640A9CFBC26D48E8F /* Pods_Transcribe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A7D36901EDA383A00D5AE95 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		2A7D36951EDA609500D5AE95 /* RecordingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingCell.swift; sourceTree = "<group>"; };
 		2AE01B131EC3E40900F069A3 /* Transcribe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transcribe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE01B161EC3E40900F069A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2AE01B181EC3E40900F069A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2AE01B181EC3E40900F069A3 /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
 		2AE01B1B1EC3E40900F069A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2AE01B1D1EC3E40900F069A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AE01B201EC3E40900F069A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AE01B221EC3E40900F069A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74C3BDE640A9CFBC26D48E8F /* Pods_Transcribe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transcribe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A608611C44CB506571AF220C /* Pods-Transcribe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transcribe.release.xcconfig"; path = "Pods/Target Support Files/Pods-Transcribe/Pods-Transcribe.release.xcconfig"; sourceTree = "<group>"; };
+		FE895FE3C7B299371E2CE218 /* Pods-Transcribe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transcribe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Transcribe/Pods-Transcribe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,53 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E197DA1AC0C47643E65A8C9 /* Pods_Transcribe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		146B177D55B71187D2989B0A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE895FE3C7B299371E2CE218 /* Pods-Transcribe.debug.xcconfig */,
+				A608611C44CB506571AF220C /* Pods-Transcribe.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2A7D36921EDA384D00D5AE95 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2AE01B181EC3E40900F069A3 /* RecordingViewController.swift */,
+				2A7D36901EDA383A00D5AE95 /* TableViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		2A7D36931EDA385500D5AE95 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2A7D36951EDA609500D5AE95 /* RecordingCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2A7D36941EDA385A00D5AE95 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		2AE01B0A1EC3E40800F069A3 = {
 			isa = PBXGroup;
 			children = (
 				2AE01B151EC3E40900F069A3 /* Transcribe */,
 				2AE01B141EC3E40900F069A3 /* Products */,
+				146B177D55B71187D2989B0A /* Pods */,
+				BC59A16CE9B4B6A8B14B4C78 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +98,24 @@
 		2AE01B151EC3E40900F069A3 /* Transcribe */ = {
 			isa = PBXGroup;
 			children = (
+				2A7D36941EDA385A00D5AE95 /* Model */,
+				2A7D36931EDA385500D5AE95 /* View */,
+				2A7D36921EDA384D00D5AE95 /* ViewController */,
 				2AE01B161EC3E40900F069A3 /* AppDelegate.swift */,
-				2AE01B181EC3E40900F069A3 /* ViewController.swift */,
 				2AE01B1A1EC3E40900F069A3 /* Main.storyboard */,
 				2AE01B1D1EC3E40900F069A3 /* Assets.xcassets */,
 				2AE01B1F1EC3E40900F069A3 /* LaunchScreen.storyboard */,
 				2AE01B221EC3E40900F069A3 /* Info.plist */,
 			);
 			path = Transcribe;
+			sourceTree = "<group>";
+		};
+		BC59A16CE9B4B6A8B14B4C78 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74C3BDE640A9CFBC26D48E8F /* Pods_Transcribe.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AE01B251EC3E40900F069A3 /* Build configuration list for PBXNativeTarget "Transcribe" */;
 			buildPhases = (
+				974C9924D3BF5D0CDCD042C4 /* [CP] Check Pods Manifest.lock */,
 				2AE01B0F1EC3E40900F069A3 /* Sources */,
 				2AE01B101EC3E40900F069A3 /* Frameworks */,
 				2AE01B111EC3E40900F069A3 /* Resources */,
+				7C5DBA2D14352777BDCD6DBC /* [CP] Embed Pods Frameworks */,
+				8D2425E7557C68996ACD2888 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +189,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7C5DBA2D14352777BDCD6DBC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Transcribe/Pods-Transcribe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D2425E7557C68996ACD2888 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Transcribe/Pods-Transcribe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		974C9924D3BF5D0CDCD042C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2AE01B0F1EC3E40900F069A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AE01B191EC3E40900F069A3 /* ViewController.swift in Sources */,
+				2AE01B191EC3E40900F069A3 /* RecordingViewController.swift in Sources */,
+				2A7D36911EDA383A00D5AE95 /* TableViewController.swift in Sources */,
 				2AE01B171EC3E40900F069A3 /* AppDelegate.swift in Sources */,
+				2A7D36961EDA609500D5AE95 /* RecordingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +366,11 @@
 		};
 		2AE01B261EC3E40900F069A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE895FE3C7B299371E2CE218 /* Pods-Transcribe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B2N4ZJ4WGF;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Transcribe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ansail.Transcribe;
@@ -272,9 +381,11 @@
 		};
 		2AE01B271EC3E40900F069A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A608611C44CB506571AF220C /* Pods-Transcribe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B2N4ZJ4WGF;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Transcribe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ansail.Transcribe;
@@ -302,6 +413,7 @@
 				2AE01B271EC3E40900F069A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
