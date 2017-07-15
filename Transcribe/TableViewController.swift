@@ -1,3 +1,4 @@
+
 //
 //  TableViewController.swift
 //  Transcribe
@@ -31,14 +32,28 @@ class TableViewController: UITableViewController {
         } catch let error as NSError {
             print(error.localizedDescription)
         }
+        
+        self.refreshControl?.addTarget(self, action: #selector(handleRefresh(refreshControl:)), for: UIControlEvents.valueChanged)
+    }
+    
+    func handleRefresh(refreshControl: UIRefreshControl) {
+        print("refreshed!")
+        tableView.reloadData()
+        refreshControl.endRefreshing()
+    }
+    
+    func addRecordings() {
+        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recordingCell") as! RecordingCell
+        let row = indexPath.row
+        let recording = recordings?[row]
         cell.card.layer.cornerRadius = 5
         cell.card.clipsToBounds = true
         cell.card.backgroundColor = UIColor.init(gradientStyle: .leftToRight, withFrame: view.frame, andColors: [UIColor.flatSkyBlue(), UIColor.flatBlue()])
-        cell.titleLabel.text = ""
+        cell.titleLabel.text = recordingTitles?[row]
         cell.lengthDateLabel.text = "length | date"
         cell.descriptionLabel.text = "desc"
         return cell

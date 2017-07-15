@@ -10,8 +10,11 @@ import UIKit
 import Speech
 import AVFoundation
 import SCLAlertView
+import RealmSwift
 
 class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVAudioRecorderDelegate{
+    
+    let realm = try! Realm()
     
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var microphoneButton: UIButton!
@@ -32,6 +35,7 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
     var isTimerRunning = false
     var counter = 0
     
+    var recordingName: String?
     var fileName = "recording.m4a"
     
     override func viewDidLoad() {
@@ -124,15 +128,7 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
         timerLabel.text = timeString(time: counter)
     }
     
-    func getDocumentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentsDirectory = paths[0]
-        return documentsDirectory
-    }
-    
     func startRecording() {
-        let audioFilename = getDocumentsDirectory().appendingPathComponent(fileName)
-        print("Path: " + getDocumentsDirectory().path)
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
             AVSampleRateKey: 12000,
@@ -141,7 +137,7 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
         ]
         
         do {
-            audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
+            audioRecorder = try AVAudioRecorder(url: , settings: settings)
             audioRecorder?.delegate = self
             audioRecorder?.record()
             
@@ -157,15 +153,27 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
         audioRecorder = nil
         
         if success {
-            let setTitleAlert = SCLAlertView()
+            let alert = SCLAlertView()
             microphoneButton.setTitle("START", for: .normal)
-            setTitleAlert.addTextField()
-            //save the text here as title
-            //setTitleAlert.addButton("Save", target: self, selector: #selector())
-            setTitleAlert.showSuccess("New recording", subTitle: "Enter a recording name")
+            let txt = alert.addTextField()
+            alert.addButton("Save") {
+                saveRecording(name: txt.text!)
+            }
+            alert.showSuccess("New recording", subTitle: "Enter a recording name")
         } else {
             microphoneButton.setTitle("STOP", for: .normal)
              SCLAlertView().showError("Failed to record", subTitle: "Check microphone settings.")
+        }
+    }
+    
+    func saveRecording(name: String) {
+        let file = Recording()
+        file.name = recordingName!
+        file.audioFile = Data()
+        file.transcription = textView.text
+        
+        try! realm.write {
+            realm.add(file)
         }
     }
     

@@ -2,21 +2,24 @@ PODS:
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
-  - Realm (2.5.0):
-    - Realm/Headers (= 2.5.0)
-  - Realm/Headers (2.5.0)
+  - Realm (2.8.3):
+    - Realm/Headers (= 2.8.3)
+  - Realm/Headers (2.8.3)
+  - RealmSwift (2.8.3):
+    - Realm (= 2.8.3)
   - SCLAlertView (0.7.0)
 
 DEPENDENCIES:
   - ChameleonFramework
-  - Realm
+  - RealmSwift
   - SCLAlertView
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  Realm: 62abce501668580092d2be9b6ba7324a3d5f906a
+  Realm: 3601ef091c8c499a31101d8563b991e75546cdce
+  RealmSwift: 8183818515471b01a99abdd2970f8e4fd52b6f4a
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
 
-PODFILE CHECKSUM: d947c363f0078ccb5b3182f7395176d7b1efc4d7
+PODFILE CHECKSUM: 649101cc418ea7b9e186f3353ad4d9ccf4c5219c
 
 COCOAPODS: 1.2.0

@@ -6,7 +6,7 @@ target 'Transcribe' do
   use_frameworks!
 
   # Pods for Transcribe
-pod 'Realm'
+pod 'RealmSwift'
 pod 'ChameleonFramework'
 pod 'SCLAlertView'
 
