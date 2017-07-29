@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import ChameleonFramework
 import RealmSwift
-
 class TableViewController: UITableViewController {
     
     //var recordingTitles: [String]?
@@ -58,7 +57,6 @@ class TableViewController: UITableViewController {
         tableView.reloadData()
         refreshControl?.endRefreshing()
     }
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recordingCell") as! RecordingCell
         cell.card.layer.cornerRadius = 5

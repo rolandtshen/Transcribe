@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>DateTools.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Transcribe.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,17 +32,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>019B8DD7F9406148F9C695DB96EBC4A3</key>
+		<key>1C3CC76A919A6A240F69204A71CF34CD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4988A26C5CBEB84488F00CA58C857FAB</key>
+		<key>2EA1DEDD25B08AAD60B9A88EFC972CD1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5CE64E5440FF743A209806D54A01A4B1</key>
+		<key>723968F0A6E791FCF6FABAAFE1C78F43</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>906404472F31F581B38C14813B825FAF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>911F2E9CAA9923AE1D6A9D49C9108639</key>
+		<key>AE37DEBCBAB8645747987AA72340A98F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -9,6 +9,5 @@ target 'Transcribe' do
 pod 'RealmSwift'
 pod 'ChameleonFramework'
 pod 'SCLAlertView'
-pod 'DateTools'
 
 end

@@ -110,7 +110,6 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
             microphoneButton.setTitle("Start Recording", for: .normal)
             timer.invalidate()
             counter = 0
-            timerLabel.text = "00:00:00"
         } else {
             startSpeechRecognition()
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
@@ -161,7 +160,7 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
         audioRecorder?.stop()
         audioRecorder = nil
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat
+        dateFormatter.dateFormat = "MM/dd"
         
         if success {
             let alert = SCLAlertView()
@@ -170,7 +169,7 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
             alert.addButton("Save", action: {
                 self.recording.name = txt.text
                 self.recording.url = String(describing: self.audioURL)
-                self.recording.date = Date()
+                self.recording.date = dateFormatter.string(from: Date())
                 self.recording.duration = self.timerLabel.text
                 self.recording.transcription = self.textView.text
                 try! self.realm.write {

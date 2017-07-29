@@ -13,6 +13,6 @@ class Recording: Object {
     dynamic var name: String?
     dynamic var url: String?
     dynamic var duration: String?
-    dynamic var date: Date?
+    dynamic var date: String?
     dynamic var transcription: String?
 }
