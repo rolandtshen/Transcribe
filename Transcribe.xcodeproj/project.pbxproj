@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A1E727E1F2C03E40068257D /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1E727D1F2C03E40068257D /* Recording.swift */; };
+		2A1E72811F2C0AF00068257D /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1E72801F2C0AF00068257D /* RealmHelper.swift */; };
 		2A7D36911EDA383A00D5AE95 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D36901EDA383A00D5AE95 /* TableViewController.swift */; };
 		2A7D36961EDA609500D5AE95 /* RecordingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D36951EDA609500D5AE95 /* RecordingCell.swift */; };
 		2AE01B171EC3E40900F069A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE01B161EC3E40900F069A3 /* AppDelegate.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A1E727D1F2C03E40068257D /* Recording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		2A1E72801F2C0AF00068257D /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		2A7D36901EDA383A00D5AE95 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		2A7D36951EDA609500D5AE95 /* RecordingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingCell.swift; sourceTree = "<group>"; };
 		2AE01B131EC3E40900F069A3 /* Transcribe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transcribe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +57,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2A1E727F1F2C0AD60068257D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2A1E72801F2C0AF00068257D /* RealmHelper.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		2A7D36921EDA384D00D5AE95 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +85,7 @@
 		2A7D36941EDA385A00D5AE95 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2A1E727D1F2C03E40068257D /* Recording.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -98,6 +111,7 @@
 		2AE01B151EC3E40900F069A3 /* Transcribe */ = {
 			isa = PBXGroup;
 			children = (
+				2A1E727F1F2C0AD60068257D /* Helpers */,
 				2A7D36941EDA385A00D5AE95 /* Model */,
 				2A7D36931EDA385500D5AE95 /* View */,
 				2A7D36921EDA384D00D5AE95 /* ViewController */,
@@ -243,6 +257,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AE01B191EC3E40900F069A3 /* RecordingViewController.swift in Sources */,
+				2A1E72811F2C0AF00068257D /* RealmHelper.swift in Sources */,
+				2A1E727E1F2C03E40068257D /* Recording.swift in Sources */,
 				2A7D36911EDA383A00D5AE95 /* TableViewController.swift in Sources */,
 				2AE01B171EC3E40900F069A3 /* AppDelegate.swift in Sources */,
 				2A7D36961EDA609500D5AE95 /* RecordingCell.swift in Sources */,

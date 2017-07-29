@@ -10,12 +10,17 @@ import UIKit
 import Speech
 import AVFoundation
 import SCLAlertView
+import RealmSwift
 
-class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVAudioRecorderDelegate{
+class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVAudioRecorderDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var microphoneButton: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
+    
+    let recording = Recording()
+    var audioURL: URL?
+    let realm = try! Realm()
     
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))!
     
@@ -32,7 +37,7 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
     var isTimerRunning = false
     var counter = 0
     
-    var fileName = "recording.m4a"
+    var fileName = "\(NSUUID().uuidString).m4a"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -131,7 +136,7 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
     }
     
     func startRecording() {
-        let audioFilename = getDocumentsDirectory().appendingPathComponent(fileName)
+        audioURL = getDocumentsDirectory().appendingPathComponent(fileName)
         print("Path: " + getDocumentsDirectory().path)
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
@@ -141,7 +146,7 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
         ]
         
         do {
-            audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
+            audioRecorder = try AVAudioRecorder(url: audioURL!, settings: settings)
             audioRecorder?.delegate = self
             audioRecorder?.record()
             
@@ -155,14 +160,26 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
     func finishRecording(success: Bool) {
         audioRecorder?.stop()
         audioRecorder = nil
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat
         
         if success {
-            let setTitleAlert = SCLAlertView()
+            let alert = SCLAlertView()
             microphoneButton.setTitle("START", for: .normal)
-            setTitleAlert.addTextField()
-            //save the text here as title
-            //setTitleAlert.addButton("Save", target: self, selector: #selector())
-            setTitleAlert.showSuccess("New recording", subTitle: "Enter a recording name")
+            let txt = alert.addTextView()
+            alert.addButton("Save", action: {
+                self.recording.name = txt.text
+                self.recording.url = String(describing: self.audioURL)
+                self.recording.date = Date()
+                self.recording.duration = self.timerLabel.text
+                self.recording.transcription = self.textView.text
+                try! self.realm.write {
+                    self.realm.add(self.recording)
+                    self.navigationController?.popViewController(animated: true)
+                }
+            })
+            alert.showSuccess("New recording", subTitle: "Enter a recording name")
+            print("Recording SAVED")
         } else {
             microphoneButton.setTitle("STOP", for: .normal)
              SCLAlertView().showError("Failed to record", subTitle: "Check microphone settings.")
