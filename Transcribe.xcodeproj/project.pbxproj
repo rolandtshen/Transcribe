@@ -9,8 +9,20 @@
 /* Begin PBXBuildFile section */
 		2A1E727E1F2C03E40068257D /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1E727D1F2C03E40068257D /* Recording.swift */; };
 		2A1E72811F2C0AF00068257D /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1E72801F2C0AF00068257D /* RealmHelper.swift */; };
+		2A4EB3AF1F3A7637009CB578 /* ProximaNova-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A4EB3A41F3A7637009CB578 /* ProximaNova-Black.otf */; };
+		2A4EB3B01F3A7637009CB578 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A4EB3A51F3A7637009CB578 /* ProximaNova-Bold.otf */; };
+		2A4EB3B11F3A7637009CB578 /* ProximaNova-BoldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A4EB3A61F3A7637009CB578 /* ProximaNova-BoldIt.otf */; };
+		2A4EB3B21F3A7637009CB578 /* ProximaNova-Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A4EB3A71F3A7637009CB578 /* ProximaNova-Extrabold.otf */; };
+		2A4EB3B31F3A7637009CB578 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A4EB3A81F3A7637009CB578 /* ProximaNova-Light.otf */; };
+		2A4EB3B41F3A7637009CB578 /* ProximaNova-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A4EB3A91F3A7637009CB578 /* ProximaNova-LightItalic.otf */; };
+		2A4EB3B51F3A7637009CB578 /* ProximaNova-RegItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A4EB3AA1F3A7637009CB578 /* ProximaNova-RegItalic.otf */; };
+		2A4EB3B61F3A7637009CB578 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A4EB3AB1F3A7637009CB578 /* ProximaNova-Regular.otf */; };
+		2A4EB3B71F3A7637009CB578 /* ProximaNova-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A4EB3AC1F3A7637009CB578 /* ProximaNova-RegularItalic.otf */; };
+		2A4EB3B81F3A7637009CB578 /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A4EB3AD1F3A7637009CB578 /* ProximaNova-Semibold.otf */; };
+		2A4EB3B91F3A7637009CB578 /* ProximaNova-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A4EB3AE1F3A7637009CB578 /* ProximaNova-SemiboldItalic.otf */; };
 		2A7D36911EDA383A00D5AE95 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D36901EDA383A00D5AE95 /* TableViewController.swift */; };
 		2A7D36961EDA609500D5AE95 /* RecordingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D36951EDA609500D5AE95 /* RecordingCell.swift */; };
+		2AA478C01F3804DF00F7A3B2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA478BF1F3804DF00F7A3B2 /* DetailViewController.swift */; };
 		2AE01B171EC3E40900F069A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE01B161EC3E40900F069A3 /* AppDelegate.swift */; };
 		2AE01B191EC3E40900F069A3 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE01B181EC3E40900F069A3 /* RecordingViewController.swift */; };
 		2AE01B1C1EC3E40900F069A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE01B1A1EC3E40900F069A3 /* Main.storyboard */; };
@@ -22,8 +34,20 @@
 /* Begin PBXFileReference section */
 		2A1E727D1F2C03E40068257D /* Recording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
 		2A1E72801F2C0AF00068257D /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		2A4EB3A41F3A7637009CB578 /* ProximaNova-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Black.otf"; sourceTree = "<group>"; };
+		2A4EB3A51F3A7637009CB578 /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		2A4EB3A61F3A7637009CB578 /* ProximaNova-BoldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-BoldIt.otf"; sourceTree = "<group>"; };
+		2A4EB3A71F3A7637009CB578 /* ProximaNova-Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Extrabold.otf"; sourceTree = "<group>"; };
+		2A4EB3A81F3A7637009CB578 /* ProximaNova-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Light.otf"; sourceTree = "<group>"; };
+		2A4EB3A91F3A7637009CB578 /* ProximaNova-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-LightItalic.otf"; sourceTree = "<group>"; };
+		2A4EB3AA1F3A7637009CB578 /* ProximaNova-RegItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-RegItalic.otf"; sourceTree = "<group>"; };
+		2A4EB3AB1F3A7637009CB578 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
+		2A4EB3AC1F3A7637009CB578 /* ProximaNova-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-RegularItalic.otf"; sourceTree = "<group>"; };
+		2A4EB3AD1F3A7637009CB578 /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
+		2A4EB3AE1F3A7637009CB578 /* ProximaNova-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		2A7D36901EDA383A00D5AE95 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		2A7D36951EDA609500D5AE95 /* RecordingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingCell.swift; sourceTree = "<group>"; };
+		2AA478BF1F3804DF00F7A3B2 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2AE01B131EC3E40900F069A3 /* Transcribe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transcribe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE01B161EC3E40900F069A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AE01B181EC3E40900F069A3 /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
@@ -65,11 +89,31 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		2A4EB3A31F3A7637009CB578 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2A4EB3A41F3A7637009CB578 /* ProximaNova-Black.otf */,
+				2A4EB3A51F3A7637009CB578 /* ProximaNova-Bold.otf */,
+				2A4EB3A61F3A7637009CB578 /* ProximaNova-BoldIt.otf */,
+				2A4EB3A71F3A7637009CB578 /* ProximaNova-Extrabold.otf */,
+				2A4EB3A81F3A7637009CB578 /* ProximaNova-Light.otf */,
+				2A4EB3A91F3A7637009CB578 /* ProximaNova-LightItalic.otf */,
+				2A4EB3AA1F3A7637009CB578 /* ProximaNova-RegItalic.otf */,
+				2A4EB3AB1F3A7637009CB578 /* ProximaNova-Regular.otf */,
+				2A4EB3AC1F3A7637009CB578 /* ProximaNova-RegularItalic.otf */,
+				2A4EB3AD1F3A7637009CB578 /* ProximaNova-Semibold.otf */,
+				2A4EB3AE1F3A7637009CB578 /* ProximaNova-SemiboldItalic.otf */,
+			);
+			name = Fonts;
+			path = Transcribe/Fonts;
+			sourceTree = "<group>";
+		};
 		2A7D36921EDA384D00D5AE95 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				2AE01B181EC3E40900F069A3 /* RecordingViewController.swift */,
 				2A7D36901EDA383A00D5AE95 /* TableViewController.swift */,
+				2AA478BF1F3804DF00F7A3B2 /* DetailViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -93,6 +137,7 @@
 		2AE01B0A1EC3E40800F069A3 = {
 			isa = PBXGroup;
 			children = (
+				2A4EB3A31F3A7637009CB578 /* Fonts */,
 				2AE01B151EC3E40900F069A3 /* Transcribe */,
 				2AE01B141EC3E40900F069A3 /* Products */,
 				146B177D55B71187D2989B0A /* Pods */,
@@ -167,7 +212,7 @@
 				TargetAttributes = {
 					2AE01B121EC3E40900F069A3 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = B2N4ZJ4WGF;
+						DevelopmentTeam = 9J7BM537A2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -197,7 +242,18 @@
 			files = (
 				2AE01B211EC3E40900F069A3 /* LaunchScreen.storyboard in Resources */,
 				2AE01B1E1EC3E40900F069A3 /* Assets.xcassets in Resources */,
+				2A4EB3B41F3A7637009CB578 /* ProximaNova-LightItalic.otf in Resources */,
+				2A4EB3B11F3A7637009CB578 /* ProximaNova-BoldIt.otf in Resources */,
+				2A4EB3B81F3A7637009CB578 /* ProximaNova-Semibold.otf in Resources */,
+				2A4EB3AF1F3A7637009CB578 /* ProximaNova-Black.otf in Resources */,
+				2A4EB3B21F3A7637009CB578 /* ProximaNova-Extrabold.otf in Resources */,
+				2A4EB3B91F3A7637009CB578 /* ProximaNova-SemiboldItalic.otf in Resources */,
+				2A4EB3B61F3A7637009CB578 /* ProximaNova-Regular.otf in Resources */,
+				2A4EB3B31F3A7637009CB578 /* ProximaNova-Light.otf in Resources */,
+				2A4EB3B51F3A7637009CB578 /* ProximaNova-RegItalic.otf in Resources */,
+				2A4EB3B71F3A7637009CB578 /* ProximaNova-RegularItalic.otf in Resources */,
 				2AE01B1C1EC3E40900F069A3 /* Main.storyboard in Resources */,
+				2A4EB3B01F3A7637009CB578 /* ProximaNova-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +318,7 @@
 				2A7D36911EDA383A00D5AE95 /* TableViewController.swift in Sources */,
 				2AE01B171EC3E40900F069A3 /* AppDelegate.swift in Sources */,
 				2A7D36961EDA609500D5AE95 /* RecordingCell.swift in Sources */,
+				2AA478C01F3804DF00F7A3B2 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +442,7 @@
 			baseConfigurationReference = FE895FE3C7B299371E2CE218 /* Pods-Transcribe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B2N4ZJ4WGF;
+				DEVELOPMENT_TEAM = 9J7BM537A2;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Transcribe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -400,7 +457,7 @@
 			baseConfigurationReference = A608611C44CB506571AF220C /* Pods-Transcribe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B2N4ZJ4WGF;
+				DEVELOPMENT_TEAM = 9J7BM537A2;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Transcribe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

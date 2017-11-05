@@ -14,5 +14,5 @@ class RecordingCell: UITableViewCell {
     @IBOutlet weak var card: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var lengthDateLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
 }

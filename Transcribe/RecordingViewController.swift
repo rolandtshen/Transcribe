@@ -168,7 +168,7 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
             let txt = alert.addTextView()
             alert.addButton("Save", action: {
                 self.recording.name = txt.text
-                self.recording.url = String(describing: self.audioURL)
+                self.recording.url = String(describing: self.audioURL!)
                 self.recording.date = dateFormatter.string(from: Date())
                 self.recording.duration = self.timerLabel.text
                 self.recording.transcription = self.textView.text

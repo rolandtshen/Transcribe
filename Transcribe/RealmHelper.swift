@@ -24,7 +24,7 @@ class RealmHelper {
         }
     }
     
-    static func updateNote(_ recordingToBeUpdated: Recording, newRecording: Recording) {
+    static func update(_ recordingToBeUpdated: Recording, newRecording: Recording) {
         let realm = try! Realm()
         try! realm.write() {
             recordingToBeUpdated.name = newRecording.name

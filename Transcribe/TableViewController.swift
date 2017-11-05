@@ -25,7 +25,8 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         let documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         recordings = RealmHelper.retrieve()
-        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
         do {
             // Get the directory contents urls (including subfolders urls)
 //            let directoryContents = try FileManager.default.contentsOfDirectory(at: documentsUrl, includingPropertiesForKeys: nil, options: [])
@@ -59,12 +60,11 @@ class TableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recordingCell") as! RecordingCell
-        cell.card.layer.cornerRadius = 5
+        cell.card.layer.cornerRadius = 3
         cell.card.clipsToBounds = true
-        cell.card.backgroundColor = UIColor.init(gradientStyle: .leftToRight, withFrame: view.frame, andColors: [UIColor.flatSkyBlue(), UIColor.flatBlue()])
         cell.titleLabel.text = recordings[indexPath.row].name!
         cell.lengthDateLabel.text = "\(recordings[indexPath.row].duration!) | \(recordings[indexPath.row].date!)"
-        cell.descriptionLabel.text = recordings[indexPath.row].transcription!
+        cell.descriptionTextView.text = recordings[indexPath.row].transcription!
         return cell
     }
     
@@ -74,5 +74,18 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recordings.count
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "detail") {
+            let indexPath = tableView.indexPathForSelectedRow!
+            let currentRecording = recordings[indexPath.row]
+            let detailViewController = segue.destination as! DetailViewController
+            detailViewController.recording = currentRecording
+
+        }
+    }
+    
+    @IBAction func unwindToTableViewController(segue: UIStoryboardSegue) {
     }
 }
