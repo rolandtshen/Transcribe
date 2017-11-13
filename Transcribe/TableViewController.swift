@@ -25,6 +25,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         let documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         recordings = RealmHelper.retrieve()
+        
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         do {
@@ -41,6 +42,7 @@ class TableViewController: UITableViewController {
         } catch let error as NSError {
             print(error.localizedDescription)
         }
+        self.tableView.backgroundColor = UIColor(hexString: "232B3B")
         tableView.separatorStyle = .none
         refreshControl = UIRefreshControl()
         refreshControl!.addTarget(self, action: #selector(handleRefresh(_:)), for: UIControlEvents.valueChanged)
