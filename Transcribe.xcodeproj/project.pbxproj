@@ -212,7 +212,7 @@
 				TargetAttributes = {
 					2AE01B121EC3E40900F069A3 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 9J7BM537A2;
+						DevelopmentTeam = B2N4ZJ4WGF;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -442,13 +442,14 @@
 			baseConfigurationReference = FE895FE3C7B299371E2CE218 /* Pods-Transcribe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9J7BM537A2;
+				DEVELOPMENT_TEAM = B2N4ZJ4WGF;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Transcribe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ansail.Transcribe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rolandshen.transcriber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -457,13 +458,14 @@
 			baseConfigurationReference = A608611C44CB506571AF220C /* Pods-Transcribe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9J7BM537A2;
+				DEVELOPMENT_TEAM = B2N4ZJ4WGF;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Transcribe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ansail.Transcribe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rolandshen.transcriber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

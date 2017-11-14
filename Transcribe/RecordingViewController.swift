@@ -107,13 +107,13 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
             audioEngine.stop()
             recognitionRequest?.endAudio()
             microphoneButton.isEnabled = false
-            microphoneButton.setTitle("Start Recording", for: .normal)
+            microphoneButton.setImage(UIImage(named: "record"), for: .normal)
             timer.invalidate()
             counter = 0
         } else {
             startSpeechRecognition()
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
-            microphoneButton.setTitle("Stop Recording", for: .normal)
+            microphoneButton.setImage(UIImage(named: "stop"), for: .normal)
         }
         
         if audioRecorder == nil {
@@ -164,7 +164,6 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
         
         if success {
             let alert = SCLAlertView()
-            microphoneButton.setTitle("START", for: .normal)
             let txt = alert.addTextView()
             alert.addButton("Save", action: {
                 self.recording.name = txt.text
@@ -177,10 +176,9 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
                     self.navigationController?.popViewController(animated: true)
                 }
             })
-            alert.showSuccess("New recording", subTitle: "Enter a recording name")
+            alert.showSuccess("New Recording", subTitle: "Enter a recording name", closeButtonTitle: "Cancel")
             print("Recording SAVED")
         } else {
-            microphoneButton.setTitle("STOP", for: .normal)
              SCLAlertView().showError("Failed to record", subTitle: "Check microphone settings.")
         }
     }
@@ -245,7 +243,6 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
         } catch {
             print("audioEngine couldn't start because of an error.")
         }
-        microphoneButton.setTitle("Stop", for: .normal)
     }
     
     func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {

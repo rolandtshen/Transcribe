@@ -70,12 +70,17 @@ class TableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //play recording\
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recordings.count
+    }
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let recordingToDelete = recordings[indexPath.row]
+            RealmHelper.deleteRecording(recordingToDelete)
+            recordings = RealmHelper.retrieve()
+            tableView.reloadData()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -84,7 +89,6 @@ class TableViewController: UITableViewController {
             let currentRecording = recordings[indexPath.row]
             let detailViewController = segue.destination as! DetailViewController
             detailViewController.recording = currentRecording
-
         }
     }
     

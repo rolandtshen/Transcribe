@@ -28,7 +28,7 @@ class RealmHelper {
         let realm = try! Realm()
         try! realm.write() {
             recordingToBeUpdated.name = newRecording.name
-            recordingToBeUpdated.date = newRecording.date
+            recordingToBeUpdated.transcription = newRecording.transcription
         }
     }
     
