@@ -25,7 +25,7 @@ class DetailViewController: UIViewController, UINavigationControllerDelegate, AV
         self.transcriptionTextView.text = recording?.transcription
         self.automaticallyAdjustsScrollViewInsets = false
         url = URL(string: (recording?.url!)!)
-        try! AVAudioSession.sharedInstance().setCategory(convertFromAVAudioSessionCategory(AVAudioSession.Category.playback))
+        try! AVAudioSession.sharedInstance().setCategory(convertFromAVAudioSessionCategory(AVAudioSession.Category.playback), mode: .default)
         try! AVAudioSession.sharedInstance().setActive(true)
 
 //        do {

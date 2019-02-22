@@ -34,6 +34,6 @@ class RealmHelper {
     
     static func retrieve() -> Results<Recording> {
         let realm = try! Realm()
-        return realm.objects(Recording).sorted(byKeyPath: "date", ascending: true)
+        return realm.objects(Recording.self).sorted(byKeyPath: "date", ascending: true)
     }
 }

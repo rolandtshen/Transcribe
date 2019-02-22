@@ -6,8 +6,8 @@ target 'Transcribe' do
   use_frameworks!
 
   # Pods for Transcribe
+pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git', :branch => 'wip/swift4'
 pod 'RealmSwift'
-pod 'ChameleonFramework'
 pod 'SCLAlertView'
 
 end

@@ -49,7 +49,7 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
         recordingSession = AVAudioSession.sharedInstance()
         
         do {
-            try recordingSession?.setCategory(convertFromAVAudioSessionCategory(AVAudioSession.Category.playAndRecord))
+            try recordingSession?.setCategory(convertFromAVAudioSessionCategory(AVAudioSession.Category.playAndRecord), mode: AVAudioSession.Mode.default)
             try recordingSession?.setActive(true)
             recordingSession?.requestRecordPermission() { [unowned self] allowed in
                 DispatchQueue.main.async {
@@ -191,7 +191,7 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
         
         let audioSession = AVAudioSession.sharedInstance()
         do {
-            try audioSession.setCategory(convertFromAVAudioSessionCategory(AVAudioSession.Category.record))
+            try audioSession.setCategory(convertFromAVAudioSessionCategory(AVAudioSession.Category.record), mode: .action)
             try audioSession.setMode(AVAudioSession.Mode.measurement)
             try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
         } catch {
