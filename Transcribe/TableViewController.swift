@@ -45,7 +45,7 @@ class TableViewController: UITableViewController {
         self.tableView.backgroundColor = UIColor(hexString: "232B3B")
         tableView.separatorStyle = .none
         refreshControl = UIRefreshControl()
-        refreshControl!.addTarget(self, action: #selector(handleRefresh(_:)), for: UIControlEvents.valueChanged)
+        refreshControl!.addTarget(self, action: #selector(handleRefresh(_:)), for: UIControl.Event.valueChanged)
         tableView.addSubview(refreshControl!)
         tableView.reloadData()
         
@@ -56,7 +56,7 @@ class TableViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    func handleRefresh(_ refreshControl: UIRefreshControl?) {
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl?) {
         tableView.reloadData()
         refreshControl?.endRefreshing()
     }
@@ -74,7 +74,7 @@ class TableViewController: UITableViewController {
         return recordings.count
     }
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let recordingToDelete = recordings[indexPath.row]
             RealmHelper.deleteRecording(recordingToDelete)

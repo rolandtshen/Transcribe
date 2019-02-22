@@ -49,7 +49,7 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
         recordingSession = AVAudioSession.sharedInstance()
         
         do {
-            try recordingSession?.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            try recordingSession?.setCategory(convertFromAVAudioSessionCategory(AVAudioSession.Category.playAndRecord))
             try recordingSession?.setActive(true)
             recordingSession?.requestRecordPermission() { [unowned self] allowed in
                 DispatchQueue.main.async {
@@ -123,7 +123,7 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
         }
     }
     
-    func updateCounter() {
+    @objc func updateCounter() {
         counter += 1
         timerLabel.text = timeString(time: counter)
     }
@@ -191,9 +191,9 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
         
         let audioSession = AVAudioSession.sharedInstance()
         do {
-            try audioSession.setCategory(AVAudioSessionCategoryRecord)
-            try audioSession.setMode(AVAudioSessionModeMeasurement)
-            try audioSession.setActive(true, with: .notifyOthersOnDeactivation)
+            try audioSession.setCategory(convertFromAVAudioSessionCategory(AVAudioSession.Category.record))
+            try audioSession.setMode(AVAudioSession.Mode.measurement)
+            try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
         } catch {
             print("audioSession properties weren't set because of an error.")
         }
@@ -258,4 +258,9 @@ class RecordingViewController: UIViewController, SFSpeechRecognizerDelegate, AVA
             finishRecording(success: false)
         }
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
 }

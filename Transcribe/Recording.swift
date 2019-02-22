@@ -10,9 +10,9 @@ import Foundation
 import RealmSwift
 
 class Recording: Object {
-    dynamic var name: String?
-    dynamic var url: String?
-    dynamic var duration: String?
-    dynamic var date: String?
-    dynamic var transcription: String?
+    @objc dynamic var name: String?
+    @objc dynamic var url: String?
+    @objc dynamic var duration: String?
+    @objc dynamic var date: String?
+    @objc dynamic var transcription: String?
 }

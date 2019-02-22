@@ -25,7 +25,7 @@ class DetailViewController: UIViewController, UINavigationControllerDelegate, AV
         self.transcriptionTextView.text = recording?.transcription
         self.automaticallyAdjustsScrollViewInsets = false
         url = URL(string: (recording?.url!)!)
-        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        try! AVAudioSession.sharedInstance().setCategory(convertFromAVAudioSessionCategory(AVAudioSession.Category.playback))
         try! AVAudioSession.sharedInstance().setActive(true)
 
 //        do {
@@ -67,4 +67,9 @@ class DetailViewController: UIViewController, UINavigationControllerDelegate, AV
             print("AVAudioPlayer init failed")
         }
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
 }
